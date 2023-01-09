@@ -9,8 +9,10 @@
 
 }
 
-.body {
-    background: linear-gradient(0.25turn, #4f664f, #9198e5);
+html {
+    background-image: url('https://wallpaperaccess.com/full/1077152.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
 h1 {
@@ -40,18 +42,57 @@ h1 {
     border-style: none;
     font-size: 13px;
     font-weight: 600;
-    background-color: rgb(79, 102, 79);
+    background-color: rgb(75, 107, 75);
     width: 100px;
     height: 40px;
     color: rgb(235, 140, 31);
     letter-spacing: 1px;
     transition: all 0.5s;
-    overflow: hidden;
+
+}
+.brand-name {
+    padding: 20px;
+    color: rgb(235, 140, 31);
+    font-size: 2rem;
+}
+
+.row-images::-webkit-scrollbar {
+    display: none;
+
+
+}
+
+.movieimage {
+    transition: all 0.5s;
+}
+
+.movieimage:hover{
+    transform: scale(1.20);
+    object-fit: contain;
 }
 
 @media screen and (max-width:600px) {
     .navbar-btns button {
         display: none;
+    }
+
+    .rowimages {
+        margin-left: 15px;
+    }
+
+    .row {
+        margin-left: 2rem;
+        
+    }
+
+    .intro-content {
+        margin-left: 0px;
+    }
+
+    .category-row::-webkit-scrollbar {
+        display: none;
+    
+    
     }
 }
     
@@ -74,17 +115,27 @@ h1 {
 
 .intro {
     margin: 0px;
-    background-image: url('https://wallpaperaccess.com/full/1077152.jpg');
-    height: 800px;
-    background-size: cover;
+    background-color: transparent;
+    height: 650px;
 
+}
+
+.intro .intro-content h1 {
+    font-size: 4rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.rowimages {
+    display: flex;
+    flex-direction: row;
 }
 
 .intro-content {
     display: flex;
     flex-direction: column;
     color: white;
-    margin-left: 50px;
+    margin-left: 20px;
     padding-top: 200px;
 }
 
