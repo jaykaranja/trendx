@@ -13,6 +13,7 @@ html {
     background-image: url('https://wallpaperaccess.com/full/1077152.jpg');
     background-repeat: no-repeat;
     background-size: auto;
+    width: 100%;
 }
 
 h1 {
@@ -56,7 +57,7 @@ h1 {
     font-size: 2rem;
 }
 
-.row-images::-webkit-scrollbar {
+.rowimages::-webkit-scrollbar {
     display: none;
 
 
@@ -89,10 +90,12 @@ h1 {
         margin-left: 0px;
     }
 
-    .category-row::-webkit-scrollbar {
+    .rowimages::-webkit-scrollbar {
         display: none;
-    
-    
+    }
+
+    .introbtn {
+        margin-bottom: 15px;
     }
 }
     

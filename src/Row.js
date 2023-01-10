@@ -29,13 +29,13 @@ function Row({ title, fetchUrl }) {
         borderRadius: "5px",
         marginLeft : "10px",
         paddingTop: "0.1rem",
-        height: "200px",
+        height: "240px",
         marginBottom: "1.5rem",
     }}>
         <h2
         style={{
             marginLeft: "1rem",
-            marginTop: "1rem",
+            marginTop: "1.5rem",
             color: "rgb(235, 140, 31)",
         }}
         >{ title }</h2>
@@ -43,9 +43,9 @@ function Row({ title, fetchUrl }) {
         <div 
         className="rowimages"
         style={{
-            opacity:"1",
-            overflowY: "clip",
+            overflow: "scroll",
             scrollBehavior: "smooth",
+            transition: "transform 450ms",
         }}
         >
             {movies.map((movie) => (
