@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbtns from './Navbtns';
 
 function Navbar() {
   return (
@@ -7,15 +8,18 @@ function Navbar() {
           <div className='navbar-brand'>
               <h2 className='brand-name'>TrendX</h2>
           </div>
+          <div className='burger'>
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
           <div className='navbar-btns'>
-              <button className='navbar-btn'>Home</button>
-              <button className='navbar-btn'>My List</button>
-              <button className='navbar-btn'>Donate</button>
-              <button className='navbar-btn'>FAQ</button>
+            <Navbtns whereto="Home" />
+            <Navbtns whereto="Your List" />
+            <Navbtns whereto="About Us" />
+            <Navbtns whereto="FAQS" />
           </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

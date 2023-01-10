@@ -20,7 +20,7 @@ function Intro() {
   return (
     <div className='intro'>
         <div className='intro-content'>
-            <h1>TrendX</h1>
+            <p className='title'>TrendX</p>
             <h3>Where your love of movies is appreciated the most.</h3>
             <br></br>
             <div className='introbtns'>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from './axios';
 import API_KEY from './Requests'
+import { Link } from "react-router-dom";
 
 function Row({ title, fetchUrl }) {
   const  baseURL = "https://image.tmdb.org/t/p/w200";
@@ -24,10 +25,9 @@ function Row({ title, fetchUrl }) {
     className='category-row'
     style={{
         backgroundColor : "rgba(97, 142, 97, 0.492)",
-        opacity: "",
-        width: "103%",
-        borderRadius: "5px",
-        marginLeft : "10px",
+        width: "90vw",
+        borderRadius: "8px",
+        marginLeft : "4vw",
         paddingTop: "0.1rem",
         height: "240px",
         marginBottom: "1.5rem",
@@ -40,15 +40,15 @@ function Row({ title, fetchUrl }) {
         }}
         >{ title }</h2>
 
-        <div 
+        <div
         className="rowimages"
         style={{
-            overflow: "scroll",
-            scrollBehavior: "smooth",
-            transition: "transform 450ms",
+            overflow: "scroll",           
+
         }}
         >
             {movies.map((movie) => (
+                <Link to={`detail`}>
                 <img
                 className='movieimage'
                 style={{ 
@@ -57,11 +57,13 @@ function Row({ title, fetchUrl }) {
                     width: "5.5rem",
                     marginLeft: "15px",
                     marginTop: "10px",
+                    
                 }}
                 key={movie.id}
                 src={`${baseURL}${movie.poster_path}?api_key=${API_KEY}`}
                 alt={movie.name}
                 />
+                </Link>
             ))}
         </div>
     </div>
