@@ -5,3 +5,4 @@
 
 Hello. This is a project where users can check out which movies and films are available to watch in various platforms. 
 
+![TrendX](/Covers/pc_view.PNG)
