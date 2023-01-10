@@ -44,7 +44,6 @@ function Row({ title, fetchUrl }) {
         className="rowimages"
         style={{
             opacity:"1",
-            overflow: "scroll",
             overflowY: "clip",
             scrollBehavior: "smooth",
         }}
