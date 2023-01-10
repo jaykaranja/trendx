@@ -5,9 +5,9 @@
 
 Hello. This is a project where users can check out which movies and films are available to watch in various platforms. 
 
-![TrendX](/Covers/pc_view.png)
+![TrendX](/illustrations/desktop.png)
 
-![TrendX](/Covers/pc_view.png)
+![TrendX](/illustrations/mobile.png)
 
 
 ## Sit still tho, app is still under development ...
