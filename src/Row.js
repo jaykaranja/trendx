@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from './axios';
 import API_KEY from './Requests'
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 function Row({ title, fetchUrl }) {
   const  baseURL = "https://image.tmdb.org/t/p/w200";
@@ -12,12 +12,14 @@ function Row({ title, fetchUrl }) {
         const request = await axios.get(fetchUrl);
         setMovies(request.data.results);
         return request;
+       
     }
     fetchData();
+  
 
   }, [fetchUrl])
   
-  console.log(movies)
+  useParams();
 
   return (
 
@@ -48,7 +50,7 @@ function Row({ title, fetchUrl }) {
         }}
         >
             {movies.map((movie) => (
-                <Link to={`detail`}>
+                <Link to={`detail/${movie.id}`}>
                 <img
                 className='movieimage'
                 style={{ 

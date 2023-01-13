@@ -11,15 +11,15 @@ function App() {
       <Intro />
       <Row 
       title='Trending'
-      fetchUrl={axiosrequests.fetchTrendingAll}
+      fetchUrl={axiosrequests().fetchTrendingAll}
       />
       <Row 
       title='Top Movies'
-      fetchUrl={axiosrequests.fetchTrendingMovies}
+      fetchUrl={axiosrequests().fetchTrendingMovies}
       />
       <Row 
       title='Top TV Series'
-      fetchUrl={axiosrequests.fetchTrendingTV}
+      fetchUrl={axiosrequests().fetchTrendingTV}
       />
     </div>
   );

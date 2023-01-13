@@ -9,7 +9,7 @@ function Navbar() {
               <h2 className='brand-name'>TrendX</h2>
           </div>
           <div className='burger'>
-            <i class="fa-solid fa-chevron-left"></i>
+            <i className="fa-solid fa-chevron-left"></i>
           </div>
           <div className='navbar-btns'>
             <Navbtns whereto="Home" />

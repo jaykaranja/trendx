@@ -13,7 +13,7 @@ const router = createBrowserRouter([
       element: <App />,
     },
     {
-        path: "detail",
+        path: `detail/:movie_id`,
         element: <Detail />,
     },
   ]);

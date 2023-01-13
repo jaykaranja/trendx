@@ -1,21 +1,4 @@
-import axios from './axios';
-import React, { useEffect, useState } from 'react'
-import axiosrequests from './Requests';
-
 function Intro() {
-  const [movie, setMovie] = useState([]);
-  useEffect(() => {
-    async function fetchData(){
-      const request = await axios.get(axiosrequests.fetchTrendingMovies);
-      console.log(request)
-      setMovie(
-      );
-      
-    }
-    fetchData();
-  }, []);
-
-  console.log(movie);
 
   return (
     <div className='intro'>
