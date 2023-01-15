@@ -62,13 +62,13 @@ function Detail() {
           </div>
           <div className='movie-data'>
             <div className='data-piece'>
-            <i class="fa-solid fa-language"></i>&nbsp;{movie.original_language}
+            <i className="fa-solid fa-language"></i>&nbsp;{movie.original_language}
             </div>
             <div className='data-piece'>
-            <i class="fa-regular fa-calendar"></i>&nbsp;{releasedate.getFullYear()}
+            <i className="fa-regular fa-calendar"></i>&nbsp;{releasedate.getFullYear()}
             </div>
             <div className='data-piece'>
-            <i class="fa-regular fa-clock"></i>&nbsp;{movie.runtime}m
+            <i className="fa-regular fa-clock"></i>&nbsp;{movie.runtime}m
             </div>
           </div>
           <div className='movie-overview'>
@@ -82,7 +82,7 @@ function Detail() {
       />
       <Row 
       title='Other trending titles at the moment'
-      fetchUrl={axiosrequests().fetchTrendingAll}
+      fetchUrl={axiosrequests().fetchTrendingMovies}
       />
       <Footer />
     </div>

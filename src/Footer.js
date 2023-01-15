@@ -8,17 +8,17 @@ function Footer() {
              to show the data. Bored for the weekend? Check out what movies you could binge to here. 
              <br></br><br></br>
 
-             Developed with <i className="fa-sharp fa-solid fa-heart" style={{color:"red"}}></i> by <a href='https://jaykaranja.github.io'><span className='footerdata-piece'> <i class="fa-brands fa-github"></i> Jay</span></a>
+             Developed with <i className="fa-sharp fa-solid fa-heart" style={{color:"red"}}></i> by <a href='https://jaykaranja.github.io'><span className='footerdata-piece'> <i className="fa-brands fa-github"></i> Jay</span></a>
         </div>
         <div className='footer-links'>
         <div className='footer-subtitle'>
         </div>
             <div className='link-divs'>
                 <ul>
-                    <li>Home</li>
-                    <li>FAQS</li>
-                    <li>Donate</li>
-                    <li>Your Favourites</li>
+                    <li key={'Home'}>Home</li>
+                    <li key={'FAQS'}>FAQS</li>
+                    <li key={'Donate'}>Donate</li>
+                    <li key={'Favs'}>Your Favourites</li>
                 </ul>
             </div>
         </div>
