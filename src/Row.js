@@ -26,7 +26,7 @@ function Row({ title, fetchUrl }) {
     <div
     className='category-row'
     style={{
-        backgroundColor : "rgba(97, 142, 97, 0.492)",
+        backgroundColor : "rgba(37, 37, 37, 0.61)",
         width: "90vw",
         borderRadius: "8px",
         marginLeft : "4vw",

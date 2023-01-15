@@ -8,7 +8,8 @@
 html {
     background-image: url('https://wallpaperaccess.com/full/1077152.jpg');
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
+    background-attachment: fixed;
     width: 100%;
 }
 
@@ -62,6 +63,105 @@ html {
     font-size: 1.6rem;
 }
 
+.moviedetails {
+    display: flex;
+    flex-direction: row;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    margin-bottom: 2.5rem;
+
+}
+
+.movietd {
+    margin-top : 4rem;
+    margin-left: 3rem;
+    color: rgb(235, 140, 31);
+    background-color: rgba(37, 37, 37, 0.61);
+    width: 45%;
+    padding: 4rem;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-5%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+.movie-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.movie-data {
+    margin-top: .6rem;
+    font-size: .8rem;
+    font-weight: 800;
+    color: rgb(1, 1, 1);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.data-piece {
+    margin-right: 1rem;
+    background-color: rgb(235, 140, 31);
+    border-radius: 13px;
+    width: 3.5rem;
+    padding: .2rem;
+}
+
+.footerdata-piece {
+    background-color: rgb(235, 140, 31);
+    border-radius: 13px;
+    padding: .5rem;
+    color: black;
+    text-decoration-line: none;
+}
+
+.movie-image:hover {
+    transform: scale(1.05);
+}
+
+.movie-overview {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.footer {
+    padding: 3rem;
+    background-color: rgba(37, 37, 37, 0.8);
+    margin: 0;
+    color: rgb(235, 140, 31);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-text {
+    width: 100%;
+    
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+}
+
+.link-divs ul li{
+    list-style-type: none;
+    margin-top: -1rem;
+    margin-bottom: 2.5rem;
+}
+
+.footer-subtitle {
+    display: block;
+}
+
+
 .rowimages::-webkit-scrollbar {
     display: none;
 
@@ -69,6 +169,12 @@ html {
 }
 
 .movieimage {
+    transition: all 0.5s;
+}
+
+.movie-image {
+    margin-top: 4rem;
+    margin-left: 4rem;
     transition: all 0.5s;
 }
 
@@ -86,10 +192,51 @@ html {
         font-size: 1rem;
         padding-left: 2vw;
     }
+
+    .movie-image {
+        margin: auto;
+        margin-top: 3rem;
+    }
+    
+    .movietd {
+        width: 100%;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1.2rem;
+
+
+    }
+
+    .footer-links {
+        margin-top: 2rem;
+
+    }
+    .link-divs {
+        padding: 1rem;
+    }
+    .movietd {
+        margin-top : 4rem;
+        margin-left: 3rem;
+        color: rgb(235, 140, 31);
+        width: 45%;
+        padding: 2rem;
+    }
+
+    
     .title {
         color: rgb(235, 140, 31);
         font-size: 2rem;
         font-weight: 900;
+    }
+
+    
+    .moviedetails {
+        display: flex;
+        flex-direction: column;
+
     }
 
     .burger {

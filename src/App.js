@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Intro from './Intro';
 import Row from './Row';
 import axiosrequests from './Requests';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       title='Top TV Series'
       fetchUrl={axiosrequests().fetchTrendingTV}
       />
+
+      <Footer />
     </div>
   );
 }
