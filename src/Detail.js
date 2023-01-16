@@ -28,11 +28,14 @@ function Detail() {
 
   },[movie_id]);
 
-  console.log(movie);
+  
 
   const baseURL = "https://image.tmdb.org/t/p/w500";
 
   const releasedate = new Date(movie.release_date);
+
+
+  window.scrollTo( 0,0 );
 
   return (
     <div>
@@ -62,13 +65,16 @@ function Detail() {
           </div>
           <div className='movie-data'>
             <div className='data-piece'>
-            <i className="fa-solid fa-language"></i>&nbsp;{movie.original_language}
+            <i className="fa-solid fa-language"></i>&nbsp;&nbsp;{movie.original_language}
             </div>
             <div className='data-piece'>
-            <i className="fa-regular fa-calendar"></i>&nbsp;{releasedate.getFullYear()}
+            <i className="fa-regular fa-calendar"></i>&nbsp;&nbsp;{releasedate.getFullYear()}
             </div>
             <div className='data-piece'>
-            <i className="fa-regular fa-clock"></i>&nbsp;{movie.runtime}m
+            <i className="fa-regular fa-clock"></i>&nbsp;&nbsp;{movie.runtime}m
+            </div>
+            <div className='data-piece'>
+            <i className="fa-solid fa-spinner"></i>&nbsp;&nbsp;{movie.status}
             </div>
           </div>
           <div className='movie-overview'>

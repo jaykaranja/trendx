@@ -11,7 +11,9 @@ html {
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
+
 }
+
 
 .burger {
     display: none;
@@ -108,7 +110,7 @@ html {
     margin-right: 1rem;
     background-color: rgb(235, 140, 31);
     border-radius: 13px;
-    width: 3.5rem;
+    width: 6rem;
     padding: .2rem;
 }
 
@@ -176,6 +178,8 @@ html {
     margin-top: 4rem;
     margin-left: 4rem;
     transition: all 0.5s;
+    width: 350px;
+    height: 528px;
 }
 
 .movieimage:hover{
@@ -184,6 +188,14 @@ html {
 }
 
 @media screen and (max-width:1000px) {
+    body {
+        background-image: url('https://wallpaperaccess.com/full/1077152.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
     .navbar-btns {
         display: none;
     }
@@ -200,6 +212,13 @@ html {
     
     .movietd {
         width: 95vw;
+        height: 6rem;
+
+    }
+
+    .moviedetails {
+        display: block;
+        width: 100vw;
     }
 
     .footer {
