@@ -122,10 +122,50 @@ html {
     align-items: center;
     height: 600px;
     animation: 1s ease-out 0s 1 slideInFromLeft;
-    background-size: 100% 100%;
-    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     transition: background-image 2s ease-in-out;
+}
+
+.sysnav-icons {
+    margin: 20px;
+    align-self: flex-start;
+    display: flex;
+    gap: 1.5rem;
+    position: sticky;
+    top: 2rem;
+    z-index: 1000;
+}
+
+.sysnav-icon button.disabled {
+    cursor: not-allowed;
+    color: rgba(235, 140, 31, 0.494);
+    background-color: #11111151;
+  }
+
+.sysnav-icon:hover button.disabled:hover {
+    scale: 1 !important;
+}
+  
+
+.sysnav-icon button, .sysnav-icon {
+    color: rgb(235, 140, 31);
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: none;
+    border: 1px solid rgb(235, 140, 31);
+    border-radius: 100%;
+    background-color: #11111192;
+    outline: none;
+    transition: all 0.1s;
+}
+
+.sysnav-icon button:hover {
+    scale: 1.1;
+}
+
+.sysnav-icon:active {
+    color: rgba(235, 140, 31, 0.629);
 }
 
 .movietd {
@@ -361,6 +401,7 @@ html {
     align-items: center;
     justify-content: center;
     width: 100%;
+    background-color: #000000b1;
 }
 
 .intro-content {

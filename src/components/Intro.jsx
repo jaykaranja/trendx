@@ -4,7 +4,7 @@ function Intro() {
     <div className='intro'>
         <div className='intro-content'>
             <p className='title'>MovieMania</p>
-            <h3 className="subtitle">Where your love of movies is appreciated the most.</h3>
+            <h3 className="subtitle">Where your love for movies is appreciated the most.</h3>
             <div className='introbtns'>
                 <button className='introbtn'>Today's Releases</button>
                 <button className='introbtn'>World's Top 10</button>

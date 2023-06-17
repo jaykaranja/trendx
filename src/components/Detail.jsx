@@ -15,10 +15,7 @@ function Detail() {
     setMovie(request.data);
     console.log(`${baseURL}${movie.backdrop_path}?api_key=${API_KEY}`)
     const html = document.getElementById("switchBg");
-    html.style.backgroundImage = `url("${baseURL}${request.data.backdrop_path}?api_key=${API_KEY}")`;
-    html.style.backgroundRepeat = "no-repeat"
-    html.style.backgroundSize = "100% 100%"
-    html.style.backgroundPosition = "center"
+    html.style.backgroundImage = `url("${baseURL}${request.data.poster_path}?api_key=${API_KEY}")`;
   }
   fetchData();
   },[movie_id]);

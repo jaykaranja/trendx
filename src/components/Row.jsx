@@ -6,7 +6,6 @@ import { useParams, Link } from "react-router-dom";
 function Row({ title, fetchUrl }) {
   const  baseURL = "https://image.tmdb.org/t/p/w200";
   const [movies, setMovies] = useState([]);
-
   useEffect(() => {
     async function fetchData(){
         const request = await axios.get(fetchUrl);
@@ -19,8 +18,6 @@ function Row({ title, fetchUrl }) {
 
   }, [fetchUrl])
   
-  useParams();
-
   return (
 
     <div
@@ -28,14 +25,14 @@ function Row({ title, fetchUrl }) {
     style={{
         backgroundColor : "#000000b1",
         width: "100%",
-        borderRadius: "8px",
+        borderRadius: "20px",
         paddingTop: "0.1rem",
         height: "auto",
         marginBottom: "1.5rem",
-    }}>
+    }}> 
         <h2
         style={{
-            marginLeft: "1rem",
+            marginLeft: "4rem",
             color: "rgb(235, 140, 31)",
         }}
         >{ title }</h2>
@@ -53,7 +50,7 @@ function Row({ title, fetchUrl }) {
                 className='movieimage'
                 style={{ 
                     opacity: "1",
-                    marginLeft: "15px",
+                    marginLeft: "25px",
                     marginTop: "10px",
                     
                 }}
