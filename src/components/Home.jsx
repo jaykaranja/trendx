@@ -1,14 +1,11 @@
-import './App.css';
-import Navbar from './Navbar';
 import Intro from './Intro';
 import Row from './Row';
 import axiosrequests from './Requests';
-import Footer from './Footer';
+import React from "react";
 
-function App() {
+function Home() {
   return (
-    <div className='container'>
-      <Navbar />
+    <>
       <Intro />
       <Row 
       title='Trending'
@@ -22,10 +19,8 @@ function App() {
       title='Top TV Series'
       fetchUrl={axiosrequests().fetchTrendingTV}
       />
-
-      <Footer />
-    </div>
+    </>
   );
 }
 
-export default App;
+export default Home;

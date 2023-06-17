@@ -1,4 +1,4 @@
-const API_KEY = "f8df8bdba5e8db2253b0b90356112dae";
+export const API_KEY = "f8df8bdba5e8db2253b0b90356112dae";
 
 
 const axiosrequests = (movie_id) => {

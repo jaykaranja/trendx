@@ -26,18 +26,16 @@ function Row({ title, fetchUrl }) {
     <div
     className='category-row'
     style={{
-        backgroundColor : "rgba(37, 37, 37, 0.61)",
-        width: "90vw",
+        backgroundColor : "#000000b1",
+        width: "100%",
         borderRadius: "8px",
-        marginLeft : "4vw",
         paddingTop: "0.1rem",
-        height: "240px",
+        height: "auto",
         marginBottom: "1.5rem",
     }}>
         <h2
         style={{
             marginLeft: "1rem",
-            marginTop: "1.5rem",
             color: "rgb(235, 140, 31)",
         }}
         >{ title }</h2>
@@ -50,13 +48,11 @@ function Row({ title, fetchUrl }) {
         }}
         >
             {movies.map((movie) => (
-                <Link to={`detail/${movie.id}`}>
+                <Link to={`/detail/${movie.id}`}>
                 <img
                 className='movieimage'
                 style={{ 
                     opacity: "1",
-                    height: "8rem",
-                    width: "5.5rem",
                     marginLeft: "15px",
                     marginTop: "10px",
                     

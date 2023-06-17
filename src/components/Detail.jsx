@@ -1,46 +1,35 @@
 import axios from './axios';
 import React, { useState, useEffect } from 'react'
-import Navbar from './Navbar';
 import axiosrequests from './Requests';
 import { useParams } from 'react-router-dom';
-import API_KEY from './Requests'
+import { API_KEY } from './Requests'
 import Row from './Row';
-import Footer from './Footer';
-
-
 
 function Detail() {
-
   const [movie, setMovie] = useState([]);
-
   const { movie_id } = useParams();
- 
-    useEffect(() => {
-    async function fetchData(){
-      const request = await axios.get(axiosrequests(movie_id).fetchDetails);
-      console.log(request);
-      setMovie(request.data);
 
-    }
-    fetchData();
-
-  
-
+  useEffect(() => {
+  async function fetchData(){
+    const request = await axios.get(axiosrequests(movie_id).fetchDetails);
+    setMovie(request.data);
+    console.log(`${baseURL}${movie.backdrop_path}?api_key=${API_KEY}`)
+    const html = document.getElementById("switchBg");
+    html.style.backgroundImage = `url("${baseURL}${request.data.backdrop_path}?api_key=${API_KEY}")`;
+    html.style.backgroundRepeat = "no-repeat"
+    html.style.backgroundSize = "100% 100%"
+    html.style.backgroundPosition = "center"
+  }
+  fetchData();
   },[movie_id]);
 
-  
-
   const baseURL = "https://image.tmdb.org/t/p/w500";
-
   const releasedate = new Date(movie.release_date);
-
-
   window.scrollTo( 0,0 );
 
   return (
-    <div>
-      <Navbar />
-      <div className='moviedetails'>
+    <>
+      <div className='moviedetails' id='switchBg'>
         <div 
           className='movie-image'
           style={{
@@ -56,9 +45,6 @@ function Detail() {
         </div>
         <div
           className='movietd'
-          style={{
-            backgroundImage: `url("${baseURL}${movie.backdrop_path}?api_key=${API_KEY}")`
-          }}
           >
           <div className='movie-title'>
             {movie.original_title}
@@ -90,8 +76,7 @@ function Detail() {
       title='Other trending titles at the moment'
       fetchUrl={axiosrequests().fetchTrendingMovies}
       />
-      <Footer />
-    </div>
+    </>
   )
 }
 

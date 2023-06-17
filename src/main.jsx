@@ -1,22 +1,31 @@
 import React from 'react';
-import App from "./App";
-import Detail from "./Detail";
+import Detail from "./components/Detail";
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 import ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import "./App.css"
 
 const router = createBrowserRouter([
     {
       path: "/",
-      element: <App />,
+      element: <Navbar />,
+      children: [
+        {
+          path: "/",
+          element: <Home />
+        },
+        {
+          path: `detail/:movie_id`,
+          element: <Detail />,
+        },
+
+      ],
     },
-    {
-        path: `detail/:movie_id`,
-        element: <Detail />,
-    },
-  ]);
+    ]);
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
