@@ -28,7 +28,6 @@ function Row({ title, fetchUrl }) {
         borderRadius: "20px",
         paddingTop: "0.1rem",
         height: "auto",
-        marginBottom: "1.5rem",
     }}> 
         <h2
         style={{

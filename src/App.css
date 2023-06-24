@@ -26,6 +26,32 @@ html {
     box-sizing: content-box;
 }
 
+.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-text {
+    width: 100%;
+    height: .9em;
+    margin-bottom: .25rem;
+    border-radius: .125rem;
+}
+
+.skeleton-text:last-child {
+    width: 40%;
+    margin-bottom: 0;
+}
+
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: rgba(235, 140, 31, 0.44);
+    }
+    100% {
+        background-color: rgba(235, 140, 31, 0.304);
+    }
+}
+
 .subtitle {
     color: rgba(235, 140, 31, 0.849);
 }
@@ -117,14 +143,12 @@ html {
 
 .moviedetails {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    gap: 1rem;
+    width: 100%;
+    height: 450px;
     animation: 1s ease-out 0s 1 slideInFromLeft;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: background-image 2s ease-in-out;
 }
 
 .sysnav-icons {
@@ -169,7 +193,6 @@ html {
 }
 
 .movietd {
-    margin-left: 3rem;
     color: rgb(235, 140, 31);
     background-color: #000000b1;
     width: 45%;
@@ -197,15 +220,18 @@ html {
     font-weight: 800;
     color: rgb(1, 1, 1);
     display: flex;
-    flex-direction: row;
+    gap: 1rem;
     text-align: center;
 }
 
 .data-piece {
-    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(235, 140, 31);
     border-radius: 13px;
     width: 6rem;
+    height: 20px;
     padding: .2rem;
 }
 
@@ -217,6 +243,11 @@ html {
     text-decoration-line: none;
 }
 
+.movie-image-holder {
+    width: 20%;
+    height: 80%;
+}
+
 .movie-image:hover {
     transform: scale(1.01);
 }
@@ -224,6 +255,9 @@ html {
 .movie-overview {
     font-size: 1rem;
     margin-top: 1rem;
+    width: 100%;
+    height: 50%;
+    overflow-wrap: break-word;
 }
 
 .footer {
@@ -276,7 +310,98 @@ html {
     box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.5);
 }
 
-@media screen and (max-width:1000px) {
+/* @media screen and (530px <= width <= 1000px) {
+    body {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .navbar-btns {
+        display: none;
+    }
+
+    .brand-name {
+        font-size: 1rem;
+        padding-left: 2vw;
+    }
+
+    .movie-image {
+        margin: auto;
+        margin-top: 3rem;
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1.2rem;
+    }
+
+    .footer-links {
+        margin-top: 2rem;
+
+    }
+    .link-divs {
+        padding: 1rem;
+    }
+    .movietd {
+        color: rgb(8, 8, 8);
+        width: 100%;
+        height: 6rem;
+
+    }
+
+    .title {
+        color: rgb(235, 140, 31);
+        font-size: 2rem;
+        font-weight: 900;
+    }
+
+    
+    .moviedetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .burger {
+        display: inline;
+        margin-top: 2.1rem;
+        color: rgb(235, 140, 31);
+    }
+
+    .rowimages {
+        margin-left: 0;
+    }
+
+
+    .intro {
+        margin: 0;
+    }
+
+    .intro-content {
+        margin-left: 50%;
+    }
+
+    .rowimages::-webkit-scrollbar {
+        display: none;
+    }
+
+    .introbtn {
+        margin-bottom: 15px;
+        transform: scale(0.9);
+    }
+
+    .category-row {
+        margin-left: 10vw;
+        width: 100%;
+    }
+}
+     */
+
+
+/* @media screen and (max-width:1000px) {
     body {
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -300,11 +425,6 @@ html {
         width: 100%;
         height: 6rem;
 
-    }
-
-    .moviedetails {
-        display: unset;
-        width: 100vw;
     }
 
     .footer {
@@ -341,6 +461,7 @@ html {
     .moviedetails {
         display: flex;
         flex-direction: column;
+        height: fit-content;
 
     }
 
@@ -377,7 +498,7 @@ html {
         width: 80vw;
     }
 }
-    
+     */
 
 .navbar-btns button:hover {
     background-color: rgb(119, 155, 119);
