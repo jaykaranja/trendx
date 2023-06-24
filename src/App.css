@@ -252,6 +252,14 @@ html {
     transform: scale(1.01);
 }
 
+.category-row {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    height: auto;
+}
+
 .movie-overview {
     font-size: 1rem;
     margin-top: 1rem;
@@ -300,6 +308,10 @@ html {
 
 .movieimage {
     transition: all .1s;
+    width: 165px;
+    height: 220px;
+    margin-left: 25px;
+    flex-shrink: 0;
 }
 
 
@@ -534,8 +546,12 @@ html {
 
 .rowimages {
     display: flex;
-    flex-direction: row;
-    height: max-content;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    height: 250px;
+    
 }
 
 .introbtn {
